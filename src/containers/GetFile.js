@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { withStore } from "./Store";
 import ReactFileReader from "react-file-reader";
-import { ComponentBox } from "../components/SharedStyles";
+import { ComponentBox, Button } from "../components/SharedStyles";
 
 function GetFile({ store }) {
   const [fileName, setFileName] = useState("");
@@ -25,7 +25,7 @@ function GetFile({ store }) {
       <div>Selected File Name:</div>
       <div>{fileName}</div>
       <ReactFileReader handleFiles={handleFiles} fileTypes={[".tsv", ".csv"]}>
-        <button className="btn">Upload</button>
+        <Button className="btn">Upload</Button>
       </ReactFileReader>
     </ComponentBox>
   );

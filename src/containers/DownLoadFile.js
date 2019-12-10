@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { withStore } from "./Store";
+import { Button } from "../components/SharedStyles";
 
 function DownLoadFile({ contentText }) {
   const downloadTxtFile = () => {
@@ -15,9 +16,9 @@ function DownLoadFile({ contentText }) {
   };
 
   return (
-    <button className="btn" onClick={() => downloadTxtFile()}>
+    <Button className="btn" onClick={() => downloadTxtFile()}>
       Download File
-    </button>
+    </Button>
   );
 }
 

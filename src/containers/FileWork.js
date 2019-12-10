@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { withStore } from "./Store";
 import FileResults from "../components/FileResults";
 import DisplayFileStatus from "../components/DisplayFileStatus";
-import { ComponentBox, ErrorMessage } from "../components/SharedStyles";
+import { ComponentBox, ErrorMessage, Button } from "../components/SharedStyles";
 import DownLoadFile from "./DownLoadFile";
 
 function FileWork({ store }) {
@@ -60,23 +60,31 @@ function FileWork({ store }) {
   };
 
   return (
-    <ComponentBox>
-      <button className="btn" onClick={() => createFiles()}>
-        Compose Files
-      </button>
-      <ErrorMessage>{message}</ErrorMessage>
-      <FileResults name="Field count" content={fieldCount} />
-      <FileResults name="Field type" content={fileType} />
-      <FileResults name="Original file content" content={fileContent} />
-      {/* <DisplayFileStatusJSX /> */}
-      <FileResults
-        name="File with requested records having the field count"
-        content={file1}
-      />
-      <DownLoadFile contentText={file1} />
-      <FileResults name="File with non requested records" content={file2} />
-      <DownLoadFile contentText={file2} />
-    </ComponentBox>
+    <div>
+      <ComponentBox>
+        <Button className="btn" onClick={() => createFiles()}>
+          Compose Files
+        </Button>
+        <ErrorMessage>{message}</ErrorMessage>
+        <FileResults name="Field count" content={fieldCount} />
+        <FileResults name="Field type" content={fileType} />
+        <FileResults name="Original file content" content={fileContent} />
+        {/* <DisplayFileStatusJSX /> */}
+      </ComponentBox>
+
+      <ComponentBox>
+        <FileResults
+          name="File with requested records having the field count"
+          content={file1}
+        />
+        <DownLoadFile contentText={file1} />
+      </ComponentBox>
+
+      <ComponentBox>
+        <FileResults name="File with non requested records" content={file2} />
+        <DownLoadFile contentText={file2} />
+      </ComponentBox>
+    </div>
   );
 }
 
