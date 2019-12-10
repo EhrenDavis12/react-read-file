@@ -1,0 +1,15 @@
+.fullResult {
+  margin-top: 20px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.text {
+  white-space: pre-line;
+}
+
+.shadowBox {
+  border-top: solid 1px;
+}
