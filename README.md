@@ -2,6 +2,8 @@
 
 This is a project put together as a quick challenge.<br />
 
+Here is a link to the [Deployed Solution](https://react-read-file-app.herokuapp.com/)!
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## The Challenge
