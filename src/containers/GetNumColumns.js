@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 import { withStore } from "./Store";
 import { ComponentBox } from "../components/SharedStyles";
 
+/*
+Use this to get the count of the fields the use is looking for
+Will render full card
+Places file content into the Store
+*/
 function GetNumColumns({ store }) {
   const [fieldCount, setFieldCount] = useState(0);
 

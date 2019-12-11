@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { withStore } from "./Store";
-import { Button } from "../components/SharedStyles";
+import React from "react";
+import { withStore } from "../containers/Store";
+import { Button } from "./SharedStyles";
 
+/*
+Will render button component
+Taking in Text it will allow the user to download it as a file. 
+*/
 function DownLoadFile({ contentText }) {
   const downloadTxtFile = () => {
-    debugger;
     const element = document.createElement("a");
     const file = new Blob([contentText], {
       type: "text/plain"
@@ -23,4 +26,3 @@ function DownLoadFile({ contentText }) {
 }
 
 export default withStore(DownLoadFile);
-// export default GetFile;
