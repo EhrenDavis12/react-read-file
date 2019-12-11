@@ -2,6 +2,8 @@
 
 This is a project put together as a quick challenge.<br />
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 ## The Challenge
 
 Write an application (a Console Application is fine) to process a delimited text file. The file will have a header row, then one row per record. The records may be comma-separated or tab-separated. An example file’s contents could be:
@@ -21,8 +23,6 @@ The application should ask the user 3 questions:
    Jose,,Morro
    Incorrectly formatted records:
    Chris,Lee
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Setup
 
