@@ -4,7 +4,7 @@ import GetNumColumns from "./GetNumColumns";
 import GetFileType from "./GetFileType";
 import FileWork from "./FileWork";
 
-function Home() {
+function ReadFileProject() {
   return (
     <div className="container">
       <GetFile />
@@ -15,4 +15,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default ReadFileProject;

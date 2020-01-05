@@ -13,7 +13,7 @@ function GetFileType({ store }) {
   const autoBtn = useRef(null);
   const csvBtn = useRef(null);
   const tsvBtn = useRef(null);
-  const baseClassName = "btn btn-secondary";
+  // const baseClassName = "btn btn-secondary";
 
   useEffect(() => {
     store.set("fileType", fileType);

@@ -1,15 +1,13 @@
-// import React, { useState, useEffect } from "react";
 import React from "react";
+import { withStore } from "./Store";
 import { ComponentBox } from "../components/SharedStyles";
-// import withOnChange from "./OnChangeSaveToStore";
-import { withOnChange2, withOnChange } from "./OnChangeSaveToStore";
 
 /*
 Use this to get the count of the fields the use is looking for
 Will render full card
 Places file content into the Store
 */
-function GetNumColumns({ onChange }) {
+function GetNumColumns({ store }) {
   return (
     <ComponentBox>
       <p>How many fields should each record contain?</p>
@@ -18,11 +16,11 @@ function GetNumColumns({ onChange }) {
         pattern="[0-9]*"
         name="fieldCount"
         onChange={e => {
-          onChange("fieldCount", e);
+          store.set("fieldCount", e.currentTarget.value);
         }}
       />
     </ComponentBox>
   );
 }
 
-export default withOnChange2(withOnChange(GetNumColumns));
+export default withStore(GetNumColumns);

@@ -1,3 +1,9 @@
+/*
+Note I got this off the internet and have had it for some time 
+that I no longer know where I got this from.
+Thank you to the person who made this!!!
+*/
+
 import React from "react";
 const StoreContext = React.createContext();
 const createStore = WrappedComponent => {
