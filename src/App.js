@@ -1,12 +1,20 @@
 import React from "react";
-import "./App.css";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { createStore } from "./containers/Store";
-import Home from "./containers/Home";
+import ReadFilePage from "./containers/ReadFilePage";
+import HomePage from "./containers/HomePage";
 
 function App() {
-  return <Home />;
+  return (
+    <Router>
+      <div>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/readfile" component={ReadFilePage} />
+      </div>
+    </Router>
+  );
 }
 
 export default createStore(App);

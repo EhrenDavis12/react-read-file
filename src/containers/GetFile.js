@@ -27,6 +27,7 @@ function GetFile({ store }) {
       <ReactFileReader handleFiles={handleFiles} fileTypes={[".tsv", ".csv"]}>
         <Button className="btn">Upload File</Button>
       </ReactFileReader>
+      <br />
       <div>
         Selected File: <strong>{fileName}</strong>
       </div>
