@@ -11,7 +11,7 @@ import { Data } from "./LongContent";
 
 function ReadFilePage() {
   return (
-    <Container>
+    <Container style={{ paddingBottom: "100px" }}>
       <PageHeader title="Read Your File and parse it">
         <InfoModel title="The Challenge" ButtonText="Read The Challenge">
           {Data.ReadFilePage.Challenge}
