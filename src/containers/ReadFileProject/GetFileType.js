@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
-import { withStore } from "./Store";
+import { withStore } from "../Store";
 import { Button, ButtonGroup } from "react-bootstrap";
-import { ComponentBox } from "../components/SharedStyles";
+import { ComponentBox } from "../../components/SharedStyles";
 
 /*
 Use this to Get the file type from the user. 

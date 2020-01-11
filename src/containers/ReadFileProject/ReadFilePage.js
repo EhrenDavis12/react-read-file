@@ -4,9 +4,9 @@ import GetFile from "./GetFile";
 import GetNumColumns from "./GetNumColumns";
 import GetFileType from "./GetFileType";
 import FileWork from "./FileWork";
-import PageHeader from "../components/PageHeader";
-import InfoModel from "../components/InfoModel";
-import Link from "../components/LinkToButton";
+import PageHeader from "../../components/PageHeader";
+import InfoModel from "../../components/InfoModel";
+import Link from "../../components/LinkToButton";
 import { Data } from "./LongContent";
 
 function ReadFilePage() {

@@ -1,9 +1,13 @@
 import React, { useState } from "react";
-import { withStore } from "./Store";
-import FileResults from "../components/FileResults";
-import { ComponentBox, Button, ErrorMessage } from "../components/SharedStyles";
-import DownLoadFile from "../components/DownLoadFile";
-import { CreateSubFilesUsingFileCount } from "../components/CreateFileUtils";
+import { withStore } from "../Store";
+import FileResults from "./FileResults";
+import {
+  ComponentBox,
+  Button,
+  ErrorMessage
+} from "../../components/SharedStyles";
+import DownLoadFile from "./DownLoadFile";
+import { CreateSubFilesUsingFileCount } from "./CreateFileUtils";
 
 /*
 Will render full card

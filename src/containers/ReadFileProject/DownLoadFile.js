@@ -1,6 +1,5 @@
 import React from "react";
-import { withStore } from "../containers/Store";
-import { Button } from "./SharedStyles";
+import { Button } from "../../components/SharedStyles";
 
 /*
 Will render button component
@@ -25,4 +24,4 @@ function DownLoadFile({ contentText }) {
   );
 }
 
-export default withStore(DownLoadFile);
+export default DownLoadFile;

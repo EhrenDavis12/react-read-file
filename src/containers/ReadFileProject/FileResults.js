@@ -1,5 +1,5 @@
 import React from "react";
-import { Styled } from "../components/SharedStyles";
+import { Styled } from "../../components/SharedStyles";
 
 const FullResult = Styled.div`
 margin-top: 20px;

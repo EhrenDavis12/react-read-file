@@ -1,5 +1,5 @@
 import React from "react";
-import { ComponentBox } from "../components/SharedStyles";
+import { ComponentBox } from "../../components/SharedStyles";
 
 export const Data = {
   ReadFilePage: {

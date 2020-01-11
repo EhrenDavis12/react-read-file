@@ -1,6 +1,6 @@
 import React from "react";
-import { withStore } from "./Store";
-import { ComponentBox } from "../components/SharedStyles";
+import { withStore } from "../Store";
+import { ComponentBox } from "../../components/SharedStyles";
 
 /*
 Use this to get the count of the fields the use is looking for

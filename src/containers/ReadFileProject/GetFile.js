@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { withStore } from "./Store";
+import { withStore } from "../Store";
 import ReactFileReader from "react-file-reader";
-import { ComponentBox, Button } from "../components/SharedStyles";
+import { ComponentBox, Button } from "../../components/SharedStyles";
 
 /*
 Use this to Get the File from the user. 
