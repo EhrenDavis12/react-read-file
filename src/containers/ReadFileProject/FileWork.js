@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { withStore } from "../Store";
-import FileResults from "./FileResults";
+import ViewerWithTitle from "../../components/ViewerWithTitle";
 import {
   ComponentBox,
   Button,
@@ -60,39 +60,39 @@ function FileWork({ store }) {
         <ErrorMessage>{message}</ErrorMessage>
         {showSummary ? (
           <>
-            <FileResults name="Field count">{`${fieldCount}`}</FileResults>
-            <FileResults name="Field type">{fileType}</FileResults>
-            <FileResults
+            <ViewerWithTitle name="Field count">{`${fieldCount}`}</ViewerWithTitle>
+            <ViewerWithTitle name="Field type">{fileType}</ViewerWithTitle>
+            <ViewerWithTitle
               name="Original file content"
               title="Original file content"
               ButtonText="View Original File"
             >
               {fileContent}
-            </FileResults>
+            </ViewerWithTitle>
           </>
         ) : null}
       </ComponentBox>
       {showSummary ? (
         <>
           <ComponentBox>
-            <FileResults
+            <ViewerWithTitle
               name="File with requested records having the field count"
               title="File with non requested records"
               ButtonText="View File Results"
             >
               {file1}
-            </FileResults>
+            </ViewerWithTitle>
             <DownLoadFile contentText={file1} />
           </ComponentBox>
 
           <ComponentBox>
-            <FileResults
+            <ViewerWithTitle
               name="File with non requested records"
               title="File with non requested records"
               ButtonText="View File Results"
             >
               {file2}
-            </FileResults>
+            </ViewerWithTitle>
             <DownLoadFile contentText={file2} />
           </ComponentBox>
         </>
