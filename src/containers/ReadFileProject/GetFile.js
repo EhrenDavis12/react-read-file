@@ -15,7 +15,8 @@ function GetFile({ store }) {
     var reader = new FileReader();
     reader.onload = function(e) {
       setFileName(reader.fileName);
-      store.set("file", reader.result);
+      store.set("fr_fileName", reader.fileName);
+      store.set("fr_file", reader.result);
     };
     reader.fileName = files[0].name;
     reader.readAsText(files[0]);

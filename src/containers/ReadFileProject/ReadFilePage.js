@@ -25,7 +25,7 @@ function ReadFilePage() {
       <GetFile />
       <GetNumberFromUser
         title="How many fields should each record contain?"
-        fieldName="fieldCount"
+        fieldName="fr_fieldCount"
         defaultValue="3"
       />
       <GetFileType />
