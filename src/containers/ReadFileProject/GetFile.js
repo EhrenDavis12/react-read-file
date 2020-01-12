@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { withStore } from "../Store";
 import ReactFileReader from "react-file-reader";
-import { ComponentBox, Button } from "../../components/SharedStyles";
+import { ComponentBox, Button, Text } from "../../components/SharedStyles";
 
 /*
 Use this to Get the File from the user. 
@@ -29,9 +29,9 @@ function GetFile({ store }) {
         <Button className="btn">Upload File</Button>
       </ReactFileReader>
       <br />
-      <div>
+      <Text>
         Selected File: <strong>{fileName}</strong>
-      </div>
+      </Text>
     </ComponentBox>
   );
 }
