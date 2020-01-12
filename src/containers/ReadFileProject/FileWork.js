@@ -34,7 +34,6 @@ function FileWork({ store }) {
 
   const compileDataForFiles = async () => {
     const localState = await getStoreDataAsync();
-    debugger;
     setFileContent(localState.fileContent);
     setFieldCount(parseInt(localState.fieldCount));
     setShowSummary(true);

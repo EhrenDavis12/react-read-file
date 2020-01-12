@@ -31,7 +31,7 @@ function GetFileType({ store }) {
         <Button
           className=" active"
           ref={autoBtn}
-          variant="secondary"
+          variant="primary"
           value="Auto"
           onClick={handleInputChange}
         >
@@ -39,7 +39,7 @@ function GetFileType({ store }) {
         </Button>
         <Button
           ref={tsvBtn}
-          variant="secondary"
+          variant="primary"
           value="CSV"
           onClick={handleInputChange}
         >
@@ -47,7 +47,7 @@ function GetFileType({ store }) {
         </Button>
         <Button
           ref={csvBtn}
-          variant="secondary"
+          variant="primary"
           value="TSV"
           onClick={handleInputChange}
         >
