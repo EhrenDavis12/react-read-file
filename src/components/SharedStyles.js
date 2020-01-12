@@ -26,4 +26,5 @@ export const Ul = Styled.ul`
 
 export const Text = Styled.div`
 white-space: pre-line;
+word-wrap: break-word;
 `;
