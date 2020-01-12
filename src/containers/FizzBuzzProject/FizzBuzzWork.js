@@ -3,13 +3,9 @@ import { withStore } from "../Store";
 import { ComponentBox, Button, Ul } from "../../components/SharedStyles";
 import { GetFizzBuzz } from "./Calculate";
 
-/*
-Will render full card
-Displays the state as a card -- this helps to Identify what state is used to run the file.
-Displays resulting files available for download.
-*/
 function FizzBuzzWork({ store }) {
   const [listItems, setListItems] = useState();
+  const [showResults, setShowResults] = useState(false);
 
   const getStoreDataAsync = async () => {
     return {
@@ -29,6 +25,7 @@ function FizzBuzzWork({ store }) {
         </li>
       ))
     );
+    setShowResults(true);
   };
 
   return (
@@ -39,9 +36,11 @@ function FizzBuzzWork({ store }) {
         </Button>
       </ComponentBox>
 
-      <ComponentBox>
-        <Ul>{listItems}</Ul>
-      </ComponentBox>
+      {showResults ? (
+        <ComponentBox>
+          <Ul>{listItems}</Ul>
+        </ComponentBox>
+      ) : null}
     </div>
   );
 }

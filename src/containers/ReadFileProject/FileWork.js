@@ -8,6 +8,7 @@ import {
 } from "../../components/SharedStyles";
 import DownLoadFile from "./DownLoadFile";
 import { CreateSubFilesUsingFileCount } from "./CreateFileUtils";
+// import InfoModel from "../../components/InfoModel";
 
 /*
 Will render full card
@@ -36,13 +37,13 @@ function FileWork({ store }) {
     const localState = await getStoreDataAsync();
     setFileContent(localState.fileContent);
     setFieldCount(parseInt(localState.fieldCount));
-    setShowSummary(true);
 
     if (!localState.fileContent) {
       setMessage("please select a file");
       return;
     }
     setMessage("");
+    setShowSummary(true);
 
     const jsonFiles = CreateSubFilesUsingFileCount(localState);
     setFile1(jsonFiles.fileWithFieldCount);
@@ -59,25 +60,43 @@ function FileWork({ store }) {
         <ErrorMessage>{message}</ErrorMessage>
         {showSummary ? (
           <>
-            <FileResults name="Field count" content={`${fieldCount}`} />
-            <FileResults name="Field type" content={fileType} />
-            <FileResults name="Original file content" content={fileContent} />
+            <FileResults name="Field count">{`${fieldCount}`}</FileResults>
+            <FileResults name="Field type">{fileType}</FileResults>
+            <FileResults
+              name="Original file content"
+              title="Original file content"
+              ButtonText="View Original File"
+            >
+              {fileContent}
+            </FileResults>
           </>
         ) : null}
       </ComponentBox>
+      {showSummary ? (
+        <>
+          <ComponentBox>
+            <FileResults
+              name="File with requested records having the field count"
+              title="File with non requested records"
+              ButtonText="View File Results"
+            >
+              {file1}
+            </FileResults>
+            <DownLoadFile contentText={file1} />
+          </ComponentBox>
 
-      <ComponentBox>
-        <FileResults
-          name="File with requested records having the field count"
-          content={file1}
-        />
-        <DownLoadFile contentText={file1} />
-      </ComponentBox>
-
-      <ComponentBox>
-        <FileResults name="File with non requested records" content={file2} />
-        <DownLoadFile contentText={file2} />
-      </ComponentBox>
+          <ComponentBox>
+            <FileResults
+              name="File with non requested records"
+              title="File with non requested records"
+              ButtonText="View File Results"
+            >
+              {file2}
+            </FileResults>
+            <DownLoadFile contentText={file2} />
+          </ComponentBox>
+        </>
+      ) : null}
     </div>
   );
 }

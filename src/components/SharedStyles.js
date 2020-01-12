@@ -24,6 +24,6 @@ export const Ul = Styled.ul`
   column-width: 150px;
 `;
 
-export const HideGroup = Styled.div`
-  hidden: ${props => props.hide || "display:none"};
+export const Text = Styled.div`
+white-space: pre-line;
 `;
