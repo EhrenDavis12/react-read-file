@@ -1,12 +1,22 @@
 import React from "react";
-import "./App.css";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { createStore } from "./containers/Store";
-import Home from "./containers/Home";
+import ReadFilePage from "./containers/ReadFileProject/ReadFilePage";
+import FizzBuzzPage from "./containers/FizzBuzzProject/FizzBuzzPage";
+import HomePage from "./containers/HomePage";
 
 function App() {
-  return <Home />;
+  return (
+    <Router>
+      <div>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/readfile" component={ReadFilePage} />
+        <Route exact path="/fizzbuzz" component={FizzBuzzPage} />
+      </div>
+    </Router>
+  );
 }
 
 export default createStore(App);

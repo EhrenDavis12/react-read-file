@@ -1,9 +1,13 @@
 import React, { useState } from "react";
-import { withStore } from "./Store";
-import FileResults from "../components/FileResults";
-import { ComponentBox, Button, ErrorMessage } from "../components/SharedStyles";
-import DownLoadFile from "../components/DownLoadFile";
-import { CreateSubFilesUsingFileCount } from "../components/CreateFileUtils";
+import { withStore } from "../Store";
+import FileResults from "./FileResults";
+import {
+  ComponentBox,
+  Button,
+  ErrorMessage
+} from "../../components/SharedStyles";
+import DownLoadFile from "./DownLoadFile";
+import { CreateSubFilesUsingFileCount } from "./CreateFileUtils";
 
 /*
 Will render full card
@@ -12,12 +16,13 @@ Displays resulting files available for download.
 */
 function FileWork({ store }) {
   const [fileContent, setFileContent] = useState("");
-  const [fieldCount, setFieldCount] = useState(0);
+  const [fieldCount, setFieldCount] = useState("");
   const [fileType, setFileType] = useState("");
   const [message, setMessage] = useState("");
 
   const [file1, setFile1] = useState("");
   const [file2, setFile2] = useState("");
+  const [showSummary, setShowSummary] = useState(false);
 
   const getStoreDataAsync = async () => {
     return {
@@ -29,8 +34,10 @@ function FileWork({ store }) {
 
   const compileDataForFiles = async () => {
     const localState = await getStoreDataAsync();
+    debugger;
     setFileContent(localState.fileContent);
     setFieldCount(parseInt(localState.fieldCount));
+    setShowSummary(true);
 
     if (!localState.fileContent) {
       setMessage("please select a file");
@@ -51,9 +58,13 @@ function FileWork({ store }) {
           Compose Files
         </Button>
         <ErrorMessage>{message}</ErrorMessage>
-        <FileResults name="Field count" content={fieldCount} />
-        <FileResults name="Field type" content={fileType} />
-        <FileResults name="Original file content" content={fileContent} />
+        {showSummary ? (
+          <>
+            <FileResults name="Field count" content={`${fieldCount}`} />
+            <FileResults name="Field type" content={fileType} />
+            <FileResults name="Original file content" content={fileContent} />
+          </>
+        ) : null}
       </ComponentBox>
 
       <ComponentBox>
