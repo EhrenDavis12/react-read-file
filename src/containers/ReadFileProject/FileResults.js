@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Styled } from "../../components/SharedStyles";
+import InfoModel from "../../components/InfoModel";
+import { Styled, Text } from "../../components/SharedStyles";
 
 const FullResult = Styled.div`
 margin-top: 20px;
@@ -9,22 +10,30 @@ margin-top: 20px;
 const Name = Styled.div`
 font-weight: bold;
 `;
-const Text = Styled.div`
-white-space: pre-line;
-`;
 
-function FileResults({ name, content }) {
+const Spacer = Styled.div`margin: 0px 0px 10px 0px`;
+
+function FileResults({ name, children, ...props }) {
   return (
     <FullResult>
       <Name>{name}:</Name>
-      <Text>{content}</Text>
+
+      {props.title ? (
+        <Spacer>
+          <InfoModel {...props}>
+            <Text>{children}</Text>
+          </InfoModel>
+        </Spacer>
+      ) : (
+        <Text>{children}</Text>
+      )}
     </FullResult>
   );
 }
 
 FileResults.propTypes = {
   name: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired
+  children: PropTypes.string.isRequired
 };
 
 export default FileResults;
