@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import { createStore } from "./containers/Store";
 import ReadFilePage from "./containers/ReadFileProject/ReadFilePage";
+import FizzBuzzPage from "./containers/FizzBuzzProject/FizzBuzzPage";
 import HomePage from "./containers/HomePage";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <div>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/readfile" component={ReadFilePage} />
+        <Route exact path="/fizzbuzz" component={FizzBuzzPage} />
       </div>
     </Router>
   );

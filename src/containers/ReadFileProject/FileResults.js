@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Styled } from "../../components/SharedStyles";
 
 const FullResult = Styled.div`
@@ -20,5 +21,10 @@ function FileResults({ name, content }) {
     </FullResult>
   );
 }
+
+FileResults.propTypes = {
+  name: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired
+};
 
 export default FileResults;
