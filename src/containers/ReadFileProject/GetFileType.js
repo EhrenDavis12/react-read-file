@@ -22,7 +22,7 @@ function GetFileType({ store }) {
     resetActiveClass(tsvBtn);
     resetActiveClass(csvBtn);
     e.currentTarget.className += " active";
-    store.set("fileType", e.currentTarget.value);
+    store.set("fr_fileType", e.currentTarget.value);
   };
 
   return (

@@ -8,6 +8,7 @@ import {
 } from "../../components/SharedStyles";
 import DownLoadFile from "./DownLoadFile";
 import { CreateSubFilesUsingFileCount } from "./CreateFileUtils";
+import { Row, Col } from "react-bootstrap";
 // import InfoModel from "../../components/InfoModel";
 
 /*
@@ -16,6 +17,7 @@ Displays the state as a card -- this helps to Identify what state is used to run
 Displays resulting files available for download.
 */
 function FileWork({ store }) {
+  const [fileName, setFileName] = useState("");
   const [fileContent, setFileContent] = useState("");
   const [fieldCount, setFieldCount] = useState("");
   const [fileType, setFileType] = useState("");
@@ -27,14 +29,16 @@ function FileWork({ store }) {
 
   const getStoreDataAsync = async () => {
     return {
-      fileContent: await store.get("file"),
-      fieldCount: await store.get("fieldCount"),
-      fileType: await store.get("fileType")
+      fileName: await store.get("fr_fileName"),
+      fileContent: await store.get("fr_file"),
+      fieldCount: await store.get("fr_fieldCount"),
+      fileType: await store.get("fr_fileType")
     };
   };
 
   const compileDataForFiles = async () => {
     const localState = await getStoreDataAsync();
+    setFileName(localState.fileName);
     setFileContent(localState.fileContent);
     setFieldCount(parseInt(localState.fieldCount));
 
@@ -60,8 +64,17 @@ function FileWork({ store }) {
         <ErrorMessage>{message}</ErrorMessage>
         {showSummary ? (
           <>
-            <ViewerWithTitle name="Field count">{`${fieldCount}`}</ViewerWithTitle>
-            <ViewerWithTitle name="Field type">{fileType}</ViewerWithTitle>
+            <Row>
+              <Col>
+                <ViewerWithTitle name="File Name">{`${fileName}`}</ViewerWithTitle>
+              </Col>
+              <Col>
+                <ViewerWithTitle name="Field count">{`${fieldCount}`}</ViewerWithTitle>
+              </Col>
+              <Col>
+                <ViewerWithTitle name="Field type">{fileType}</ViewerWithTitle>
+              </Col>
+            </Row>
             <ViewerWithTitle
               name="Original file content"
               title="Original file content"
@@ -77,7 +90,7 @@ function FileWork({ store }) {
           <ComponentBox>
             <ViewerWithTitle
               name="File with requested records having the field count"
-              title="File with non requested records"
+              title="File with requested records having the field count"
               ButtonText="View File Results"
             >
               {file1}

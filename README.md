@@ -1,4 +1,4 @@
-## React Read File
+## Collection of Coding Challenges
 
 This is a project put together to create a collection of quick challenges.<br />
 Each programming collection I encounter I will place into this project.
