@@ -37,13 +37,13 @@ function FileWork({ store }) {
     const localState = await getStoreDataAsync();
     setFileContent(localState.fileContent);
     setFieldCount(parseInt(localState.fieldCount));
-    setShowSummary(true);
 
     if (!localState.fileContent) {
       setMessage("please select a file");
       return;
     }
     setMessage("");
+    setShowSummary(true);
 
     const jsonFiles = CreateSubFilesUsingFileCount(localState);
     setFile1(jsonFiles.fileWithFieldCount);
