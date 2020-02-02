@@ -7,7 +7,7 @@ import GetNumberFromUser from "../../components/GetNumberFromUser";
 import FizzBuzzWork from "./FizzBuzzWork";
 import { Data } from "./LongContent";
 
-function ReadFilePage() {
+function FizzBuzzPage() {
   return (
     <Container style={{ paddingBottom: "100px" }}>
       <PageHeader title="FIZZ BUZZ">
@@ -34,4 +34,4 @@ function ReadFilePage() {
   );
 }
 
-export default ReadFilePage;
+export default FizzBuzzPage;
