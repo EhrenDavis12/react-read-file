@@ -13,7 +13,8 @@ function GetNumColumns({
   title = "Title Here",
   description = "Some Text Here",
   buttonText = "Go to Project",
-  to = "/"
+  to = "/",
+  footerText = ""
 }) {
   return (
     <ComponentBoxLargeMargin>
@@ -24,6 +25,7 @@ function GetNumColumns({
           <Card.Text>{description}</Card.Text>
           <Link to={to}>{buttonText}</Link>
         </Card.Body>
+        <Card.Footer className="text-muted">{footerText}</Card.Footer>
       </Card>
     </ComponentBoxLargeMargin>
   );
@@ -33,7 +35,8 @@ GetNumColumns.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   buttonText: PropTypes.string.isRequired,
-  to: PropTypes.string.isRequired
+  to: PropTypes.string.isRequired,
+  footerText: PropTypes.string.isRequired
 };
 
 export default GetNumColumns;
