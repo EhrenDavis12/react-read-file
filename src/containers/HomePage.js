@@ -30,8 +30,15 @@ function HomePage() {
           title="Vue and Django Full-Stack"
           description="Create a Full-stack application using Vue and Django"
           buttonText="Go to Project"
-          to="VueDjango"
+          to="vue_django"
           footerText="02/01/2020"
+        />
+        <ProjectCards
+          title="Snake Matrix"
+          description="Given a Box Matrix (array of arrays) travers it clock wise to make one long array in order."
+          buttonText="Go to Project"
+          to="snake_matrix"
+          footerText="09/11/2021"
         />
       </Row>
     </Container>

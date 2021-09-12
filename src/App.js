@@ -6,6 +6,7 @@ import { createStore } from "./containers/Store";
 import ReadFilePage from "./containers/ReadFileProject";
 import FizzBuzzPage from "./containers/FizzBuzzProject";
 import VueDjango from "./containers/VueDjangoProject";
+import SnakeMatrixPage from "./containers/SnakeMatrixProject";
 import HomePage from "./containers/HomePage";
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/readfile" component={ReadFilePage} />
         <Route exact path="/fizzbuzz" component={FizzBuzzPage} />
-        <Route exact path="/VueDjango" component={VueDjango} />
+        <Route exact path="/vue_django" component={VueDjango} />
+        <Route exact path="/snake_matrix" component={SnakeMatrixPage} />
       </div>
     </Router>
   );
