@@ -7,6 +7,7 @@ import ReadFilePage from "./containers/ReadFileProject";
 import FizzBuzzPage from "./containers/FizzBuzzProject";
 import VueDjango from "./containers/VueDjangoProject";
 import SnakeMatrixPage from "./containers/SnakeMatrixProject";
+import BlankPage from "./containers/BlankProject";
 import HomePage from "./containers/HomePage";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route exact path="/fizzbuzz" component={FizzBuzzPage} />
         <Route exact path="/vue_django" component={VueDjango} />
         <Route exact path="/snake_matrix" component={SnakeMatrixPage} />
+        <Route exact path="/bp" component={BlankPage} />
       </div>
     </Router>
   );
