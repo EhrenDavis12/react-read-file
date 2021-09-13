@@ -40,6 +40,13 @@ function HomePage() {
           to="snake_matrix"
           footerText="09/11/2021"
         />
+        <ProjectCards
+          title="Consume Api"
+          description="Consume an Api with randomized data to display to the user"
+          buttonText="Go to Project"
+          to="consume_api"
+          footerText="09/12/2021"
+        />
       </Row>
     </Container>
   );
