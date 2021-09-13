@@ -42,7 +42,7 @@ function HomePage() {
         />
         <ProjectCards
           title="Consume Api"
-          description="Consume an Api with randomized data to display to the user"
+          description="You have 2 hours to consume an Api with randomized data to display to the user"
           buttonText="Go to Project"
           to="consume_api"
           footerText="09/12/2021"
