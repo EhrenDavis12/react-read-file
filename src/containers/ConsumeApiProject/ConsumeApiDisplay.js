@@ -29,7 +29,7 @@ function ConsumeApiDisplay({ store }) {
   const setDisplayPlayersComponent = () => {
       setDisplayPlayers(
         playersData.map(player => {
-            return <li key={`action_${player.id}`}>{player.name} - Health:{player.health}</li>
+            return <li key={`action_${player.id}`}>{player.id} - Health:{player.health}</li>
         })
       );
   };
@@ -43,6 +43,7 @@ function ConsumeApiDisplay({ store }) {
           </ComponentBox>
 
           <ComponentBox>
+              Players:
               <ul>{displayPlayers}</ul>
           </ComponentBox>
 

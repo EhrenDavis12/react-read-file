@@ -4,7 +4,7 @@ import _ from 'lodash';
 axios.defaults.crossDomain = true;
 
 export function api_call() {
-  const url = 'http://interview.wptdev.com/api/killfeed';
+  const url = 'https://interview.wptdev.com/api/killfeed';
   return axios.get(url).then(response => parseListAxios(response));
 };
 
