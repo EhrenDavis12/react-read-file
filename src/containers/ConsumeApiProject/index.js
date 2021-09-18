@@ -1,2 +1,2 @@
-import ConsumeApiPage from "./ConsumeApiPage";
-export default ConsumeApiPage;
+import Page from "./Page";
+export default Page;
