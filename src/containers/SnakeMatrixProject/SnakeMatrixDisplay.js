@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { withStore } from "../Store";
-import { ComponentBox, Button, Ul } from "../../components/SharedStyles";
+import { ComponentBox, Button } from "../../components/SharedStyles";
 import {generateMatrix, getRecursiveSolutionFromMatrix} from "./Calculate";
 import _ from 'lodash';
 
