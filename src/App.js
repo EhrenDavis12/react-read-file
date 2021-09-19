@@ -9,6 +9,7 @@ import VueDjango from "./containers/VueDjangoProject";
 import SnakeMatrixPage from "./containers/SnakeMatrixProject";
 import BlankPage from "./containers/BlankProject";
 import ConsumeApiPage from "./containers/ConsumeApiProject";
+import TravelPlansPage from "./containers/TravelPlansProject";
 import HomePage from "./containers/HomePage";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/snake_matrix" component={SnakeMatrixPage} />
         <Route exact path="/bp" component={BlankPage} />
         <Route exact path="/consume_api" component={ConsumeApiPage} />
+        <Route exact path="/travel_plans" component={TravelPlansPage} />
       </div>
     </Router>
   );

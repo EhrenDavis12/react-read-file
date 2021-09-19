@@ -47,6 +47,13 @@ function HomePage() {
           to="consume_api"
           footerText="09/12/2021"
         />
+        <ProjectCards
+          title="Travel Plans"
+          description="Find the route from one city to another"
+          buttonText="Go to Project"
+          to="travel_plans"
+          footerText="09/18/2021"
+        />
       </Row>
     </Container>
   );

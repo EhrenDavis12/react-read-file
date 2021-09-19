@@ -21,7 +21,6 @@ export function takeCombatAction(localContext) {
 };
 
 function getMissedMessage(){
-    debugger;
     return reasonsForMiss[Math.floor(Math.random() * reasonsForMiss.length)]
 }
 
