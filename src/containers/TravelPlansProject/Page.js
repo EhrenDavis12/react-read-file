@@ -10,6 +10,7 @@ import FareButtons from "./Components/FareButtons";
 import ResultDisplay from "./Components/ResultDisplay"
 import FareDisplay from "./Components/FareDisplay"
 import CitySelect from "./Components/CitySelect"
+import RandomizeFareButtons from "./Components/RandomizeFareButtons";
 
 function Page() {
     return (
@@ -25,6 +26,7 @@ function Page() {
             </PageHeader>
             <TravelPlansProvider>
                 <FareDisplay/>
+                <RandomizeFareButtons/>
                 <CitySelect/>
                 <FareButtons/>
                 <ResultDisplay/>

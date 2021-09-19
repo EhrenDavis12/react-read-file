@@ -3,7 +3,8 @@ import React from "react";
 import { useTravelPlansContext } from "../Context";
 import { getFaresList} from "../CalculateFare"
 import {ComponentBox} from "../../../components/SharedStyles";
-import { Table } from "react-bootstrap";
+import {Col, Row, Table} from "react-bootstrap";
+import _ from "lodash";
 
 export default function FareDisplay() {
     const { cities, fares } = useTravelPlansContext();
@@ -21,16 +22,16 @@ export default function FareDisplay() {
                 </tr>
                 </thead>
                 <tbody>
-                    {cities.map((city, index) =>
-                        <tr key={`city_row_${city}`}>
-                            <td>{city}</td>
-                            {faresList[index].map((fare, f_index) =>
-                                <td key={`fare_${city}_${f_index}`}>
-                                    {fare}
-                                </td>
-                            )}
-                        </tr>
-                    )}
+                {cities.map((city, index) =>
+                    <tr key={`city_row_${city}`}>
+                        <td>from: <strong>{city}</strong></td>
+                        {faresList[index].map((fare, f_index) =>
+                            <td key={`fare_${city}_${f_index}`}>
+                                {fare}
+                            </td>
+                        )}
+                    </tr>
+                )}
                 </tbody>
             </Table>
         </ComponentBox>
