@@ -3,6 +3,14 @@ import React, { createContext, useContext, useState } from "react";
 const TravelPlansContext = createContext({});
 const { Provider, Consumer } = TravelPlansContext;
 
+const defaultCities = ['New York', 'Paris', 'Rome', 'Phoenix']
+const defaultFares = [
+    0, 100, 150, 250,
+    30, 0, 300, 200,
+    200, 100, 0, 50,
+    50, 100, 300, 0
+]
+
 
 const TravelPlansProvider = ({ children, ...props }) => {
     const [directFare, setDirectFare] = useState(0);
@@ -10,8 +18,8 @@ const TravelPlansProvider = ({ children, ...props }) => {
     const [fromCity, setFromCity] = useState("New York");
     const [toCity, setToCity] = useState("Phoenix");
     const [rout, setRout] = useState(["New York", "Phoenix"]);
-    const [fares, setFares] = useState(["New York", "Phoenix"]);
-    const [cities, setCities] = useState(["New York", "Phoenix"]);
+    const [fares, setFares] = useState(defaultFares);
+    const [cities, setCities] = useState(defaultCities);
 
     return (
         <Provider value={{

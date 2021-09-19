@@ -1,18 +1,4 @@
-// import _ from 'lodash';
-
-const cities = ['New York', 'Paris', 'Rome', 'Phoenix']
-const fares = [
-    0, 100, 150, 250,
-    30, 0, 300, 200,
-    200, 100, 0, 50,
-    50, 100, 300, 0
-]
-
-export function getCities(){
-    return cities;
-}
-
-export function getFaresList(){
+export function getFaresList(cities, fares){
     let fares_list = [];
     for (let i =0; i<fares.length; i+=cities.length){
         fares_list.push(fares.slice(i, i+cities.length));
@@ -20,8 +6,8 @@ export function getFaresList(){
     return fares_list;
 };
 
-export function setTravelFares({fromCity, toCity, setDirectFare, setLowestFare, setRout}) {
-    const faresList = getFaresList();
+export function setTravelFares({cities, fares, fromCity, toCity, setDirectFare, setLowestFare, setRout}) {
+    const faresList = getFaresList(cities, fares);
     let lowestFare = getDirectTravelFare(fromCity, toCity);
     let bestRout = [fromCity, toCity];
 

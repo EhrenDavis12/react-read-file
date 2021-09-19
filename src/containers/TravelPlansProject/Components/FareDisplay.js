@@ -1,14 +1,13 @@
 import React from "react";
 
 import { useTravelPlansContext } from "../Context";
-import { getFaresList, getCities} from "../CalculateFare"
+import { getFaresList} from "../CalculateFare"
 import {ComponentBox} from "../../../components/SharedStyles";
 import { Table } from "react-bootstrap";
 
 export default function FareDisplay() {
-    // const { cities, fares } = useTravelPlansContext();
-    const cities = getCities();
-    const faresList = getFaresList();
+    const { cities, fares } = useTravelPlansContext();
+    const faresList = getFaresList(cities, fares);
 
     return (
         <ComponentBox>
