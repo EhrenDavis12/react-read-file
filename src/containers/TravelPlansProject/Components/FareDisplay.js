@@ -24,8 +24,8 @@ export default function FareDisplay() {
                     {cities.map((city, index) =>
                         <tr key={`city_row_${city}`}>
                             <td>{city}</td>
-                            {faresList[index].map(fare =>
-                                <td key={`fare_${city}_`}>
+                            {faresList[index].map((fare, f_index) =>
+                                <td key={`fare_${city}_${f_index}`}>
                                     {fare}
                                 </td>
                             )}

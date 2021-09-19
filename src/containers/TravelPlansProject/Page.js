@@ -9,6 +9,7 @@ import { TravelPlansProvider } from "./Context";
 import FareButtons from "./Components/FareButtons";
 import ResultDisplay from "./Components/ResultDisplay"
 import FareDisplay from "./Components/FareDisplay"
+import CitySelect from "./Components/CitySelect"
 
 function Page() {
     return (
@@ -24,8 +25,9 @@ function Page() {
             </PageHeader>
             <TravelPlansProvider>
                 <FareDisplay/>
-                <FareButtons />
-                <ResultDisplay />
+                <CitySelect/>
+                <FareButtons/>
+                <ResultDisplay/>
             </TravelPlansProvider>
         </Container>
     );
