@@ -2,7 +2,8 @@ import axios from "axios";
 axios.defaults.crossDomain = true;
 
 export function getCombatAction() {
-  const url = 'http://interview.wptdev.com/api/killfeed';
+  // The original Code challenge URl is 'http://interview.wptdev.com/api/killfeed';
+  const url = 'https://python-user-test-api.herokuapp.com/api/consume_api/combat_action/'
   return axios.get(url).then(response => parseListAxios(response));
 };
 
