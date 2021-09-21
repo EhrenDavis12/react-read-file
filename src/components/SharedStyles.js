@@ -28,3 +28,7 @@ export const Text = Styled.div`
 white-space: pre-line;
 word-wrap: break-word;
 `;
+
+export const Tab = Styled.div`
+margin-left: 30px;
+`;

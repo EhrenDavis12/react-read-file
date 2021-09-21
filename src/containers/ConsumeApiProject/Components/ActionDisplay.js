@@ -6,7 +6,6 @@ import {ComponentBox} from "../../../components/SharedStyles";
 
 export default function ActionDisplay() {
     const { combatAction } = useConsumeApiContext();
-    debugger;
     return (
         <div>
             {!_.isEmpty(combatAction) ? (

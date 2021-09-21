@@ -3,8 +3,7 @@ import React from "react";
 import { useTravelPlansContext } from "../Context";
 import { getFaresList} from "../CalculateFare"
 import {ComponentBox} from "../../../components/SharedStyles";
-import {Col, Row, Table} from "react-bootstrap";
-import _ from "lodash";
+import {Table} from "react-bootstrap";
 
 export default function FareDisplay() {
     const { cities, fares } = useTravelPlansContext();

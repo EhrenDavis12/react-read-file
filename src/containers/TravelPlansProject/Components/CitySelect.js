@@ -10,10 +10,6 @@ export default function CitySelect() {
     const cityOptions = cities.map(city=>{
         return {key: city, value: city};
     })
-    function onFromCitySelect(event) {
-        debugger;
-        setFromCity(event.target.value);
-    }
     return (
         <ComponentBox>
             <Row>
