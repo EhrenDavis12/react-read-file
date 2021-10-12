@@ -54,6 +54,13 @@ function HomePage() {
           to="travel_plans"
           footerText="09/18/2021"
         />
+        <ProjectCards
+          title="Ready To Go"
+          description="Your Programming Challenge Here"
+          buttonText="Go to Project"
+          to="ready_to_go"
+          footerText="??/??/????"
+        />
       </Row>
     </Container>
   );

@@ -7,19 +7,13 @@ import FileWork from "./FileWork";
 import PageHeader from "../../components/PageHeader";
 import InfoModel from "../../components/InfoModel";
 import Link from "../../components/LinkToButton";
-import { Data } from "./LongContent";
+import { LongContent } from "./LongContent";
 
-function ReadFilePage() {
+function Page() {
   return (
     <Container style={{ paddingBottom: "100px" }}>
       <PageHeader title="Read Your File and parse it">
-        <InfoModel title="The Challenge" ButtonText="Read The Challenge">
-          {Data.Challenge}
-        </InfoModel>
-        <br />
-        <Link style={{ margin: "10px 0px 0px 0px" }} to={"/"}>
-          All Projects
-        </Link>
+        {LongContent.Challenge}
       </PageHeader>
 
       <GetFile />
@@ -34,4 +28,4 @@ function ReadFilePage() {
   );
 }
 
-export default ReadFilePage;
+export default Page;

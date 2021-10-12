@@ -1,2 +1,2 @@
-import VueDjangoPage from "./VueDjangoPage";
-export default VueDjangoPage;
+import Page from "./Page";
+export default Page;

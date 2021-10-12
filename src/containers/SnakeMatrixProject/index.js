@@ -1,2 +1,2 @@
-import SnakeMatrixPage from "./SnakeMatrixPage";
-export default SnakeMatrixPage;
+import Page from "./Page";
+export default Page;

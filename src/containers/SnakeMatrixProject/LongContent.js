@@ -1,7 +1,7 @@
 import React from "react";
 import {Tab} from "../../components/SharedStyles";
 
-export const Data = {
+export const LongContent = {
     Challenge: (
         <div>
             <p>

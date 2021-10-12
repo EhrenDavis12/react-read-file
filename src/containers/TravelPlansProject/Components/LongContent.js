@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Data = {
+export const LongContent = {
   Challenge: (
     <p>
       This is an algorithm Code challenge!

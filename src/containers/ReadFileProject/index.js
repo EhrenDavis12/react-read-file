@@ -1,2 +1,2 @@
-import ReadFilePage from "./ReadFilePage";
-export default ReadFilePage;
+import Page from "./Page";
+export default Page;
