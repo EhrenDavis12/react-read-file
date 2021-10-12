@@ -2,23 +2,31 @@ import React from "react";
 import PropTypes from "prop-types";
 import { ComponentBox } from "../components/SharedStyles";
 import { Jumbotron } from "react-bootstrap";
+import SubProjectPageHeader from "./SubProjectPageHeader";
 
-function Link(props) {
-  return (
-    <ComponentBox>
-      <Jumbotron>
-        <h1>{props.title}</h1>
-        <p>{props.subText}</p>
-        {props.children}
-      </Jumbotron>
-    </ComponentBox>
-  );
+function PageHeader(props) {
+    return (
+        <ComponentBox>
+            <Jumbotron>
+                <h1>{props.title}</h1>
+                <p>{props.subText}</p>
+                {props.customHeaders ? (
+                    <div>{props.children}</div>
+                ) :  (
+                    <SubProjectPageHeader>
+                        {props.children}
+                    </SubProjectPageHeader>)
+                }
+            </Jumbotron>
+        </ComponentBox>
+    );
 }
 
-Link.propTypes = {
-  children: PropTypes.node,
-  title: PropTypes.string.isRequired,
-  subText: PropTypes.string
+PageHeader.propTypes = {
+    children: PropTypes.node,
+    title: PropTypes.string.isRequired,
+    subText: PropTypes.string,
+    customHeaders: PropTypes.bool
 };
 
-export default Link;
+export default PageHeader;

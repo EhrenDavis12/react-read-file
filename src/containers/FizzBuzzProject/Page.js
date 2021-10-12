@@ -1,23 +1,15 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import PageHeader from "../../components/PageHeader";
-import InfoModel from "../../components/InfoModel";
-import Link from "../../components/LinkToButton";
 import GetNumberFromUser from "../../components/GetNumberFromUser";
 import FizzBuzzWork from "./FizzBuzzWork";
-import { Data } from "./LongContent";
+import { LongContent } from "./LongContent";
 
-function FizzBuzzPage() {
+function Page() {
   return (
     <Container style={{ paddingBottom: "100px" }}>
       <PageHeader title="FIZZ BUZZ">
-        <InfoModel title="The Challenge" ButtonText="Read The Challenge">
-          {Data.Challenge}
-        </InfoModel>
-        <br />
-        <Link style={{ margin: "10px 0px 0px 0px" }} to={"/"}>
-          All Projects
-        </Link>
+          {LongContent.Challenge}
       </PageHeader>
       <GetNumberFromUser
         title="Select a number to start at"
@@ -34,4 +26,4 @@ function FizzBuzzPage() {
   );
 }
 
-export default FizzBuzzPage;
+export default Page;

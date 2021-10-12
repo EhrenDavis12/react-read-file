@@ -9,7 +9,9 @@ function HomePage() {
       <PageHeader
         title="Here is a collection of different coding challenges."
         subText="By Ehren Davis"
-      />
+        customHeaders={true}>
+        <p><a href='https://ehren-davis-profile-app.herokuapp.com/' target="_blank">Go to Web Profile</a></p>
+      </PageHeader>
 
       <Row className={classCenter}>
         <ProjectCards
@@ -53,6 +55,13 @@ function HomePage() {
           buttonText="Go to Project"
           to="travel_plans"
           footerText="09/18/2021"
+        />
+        <ProjectCards
+          title="Ready To Go"
+          description="Your Programming Challenge Here"
+          buttonText="Go to Project"
+          to="ready_to_go"
+          footerText="??/??/????"
         />
       </Row>
     </Container>
