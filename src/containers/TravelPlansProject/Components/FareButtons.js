@@ -9,9 +9,6 @@ export default function FareButtons() {
     const localTravelPlansContext = useTravelPlansContext();
     return (
         <ComponentBox>
-            {/*<Button className="btn" onClick={() => setFares(localTravelPlansContext)}>*/}
-            {/*    Generate Fares*/}
-            {/*</Button>*/}
             <Button className="btn" onClick={() => setTravelFares(localTravelPlansContext)}>
                 Find Fare Cost
             </Button>
