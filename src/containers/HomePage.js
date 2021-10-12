@@ -10,7 +10,10 @@ function HomePage() {
         title="Here is a collection of different coding challenges."
         subText="By Ehren Davis"
         customHeaders={true}>
-        <p><a href='https://ehren-davis-profile-app.herokuapp.com/' target="_blank">Go to Web Profile</a></p>
+        <p><a
+            href='https://ehren-davis-profile-app.herokuapp.com/'
+            target="_blank"
+            rel="noopener noreferrer" >Go to Web Profile</a></p>
       </PageHeader>
 
       <Row className={classCenter}>
