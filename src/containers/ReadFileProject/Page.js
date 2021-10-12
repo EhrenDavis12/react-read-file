@@ -5,8 +5,6 @@ import GetNumberFromUser from "../../components/GetNumberFromUser";
 import GetFileType from "./GetFileType";
 import FileWork from "./FileWork";
 import PageHeader from "../../components/PageHeader";
-import InfoModel from "../../components/InfoModel";
-import Link from "../../components/LinkToButton";
 import { LongContent } from "./LongContent";
 
 function Page() {

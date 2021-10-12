@@ -11,7 +11,7 @@ import CombatActionButton from "./Components/CombatActionButton"
 function Page() {
     return (
         <Container style={{ paddingBottom: "100px" }}>
-            <PageHeader title="Consume an API Code Challenge">
+            <PageHeader title="In 2 Hours, Consume an API Code Challenge">
                 {LongContent.Challenge}
             </PageHeader>
             <ConsumeApiProvider>

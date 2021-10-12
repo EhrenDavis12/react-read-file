@@ -1,8 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import PageHeader from "../../components/PageHeader";
-import InfoModel from "../../components/InfoModel";
-import Link from "../../components/LinkToButton";
 import GetNumberFromUser from "../../components/GetNumberFromUser";
 import SnakeMatrixDisplay from "./SnakeMatrixDisplay";
 import { LongContent } from "./LongContent";
