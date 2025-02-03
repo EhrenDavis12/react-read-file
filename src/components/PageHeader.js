@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { ComponentBox } from "../components/SharedStyles";
-import { Jumbotron } from "react-bootstrap";
+import Jumbotron from "./Jumbotron";
 import SubProjectPageHeader from "./SubProjectPageHeader";
 
 function PageHeader(props) {
