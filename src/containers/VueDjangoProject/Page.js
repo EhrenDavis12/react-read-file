@@ -23,7 +23,7 @@ function Page() {
 
       <ComponentBox>
         <a
-          href="https://user-activity-monitor.herokuapp.com/"
+          href="https://user-activity-monitor-8d0d4cd27f84.herokuapp.com/"
           rel="noopener noreferrer"
           target="_blank"
         >
