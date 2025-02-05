@@ -43,7 +43,7 @@ function Page() {
 
       <ComponentBox>
         <a
-          href="https://python-user-test-api.herokuapp.com/"
+          href="https://code-challenge-app-0b05fd4406a4.herokuapp.com/"
           rel="noopener noreferrer"
           target="_blank"
         >
