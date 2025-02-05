@@ -3,7 +3,7 @@ axios.defaults.crossDomain = true;
 
 export function getCombatAction() {
   // The original Code challenge URl is 'http://interview.wptdev.com/api/killfeed';
-  const url = 'https://python-user-test-api.herokuapp.com/api/consume_api/combat_action/'
+  const url = 'https://code-challenge-app-0b05fd4406a4.herokuapp.com/api/consume_api/combat_action/'
   // const url = 'http://127.0.0.1:8000/api/consume_api/combat_action/'
   return axios.get(url).then(response => parseListAxios(response));
 };
