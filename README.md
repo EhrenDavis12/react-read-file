@@ -9,6 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Setup
 
+### `nvm use 18`
 ### `npm install`
 
 ## Available Scripts
