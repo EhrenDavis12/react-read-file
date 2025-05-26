@@ -25,6 +25,7 @@ function Page() {
             setResult(null);
         }
     };
+    return (
         <Container style={{ paddingBottom: "100px" }}>
             <PageHeader title="Ready To Go Code Challenge">
                 {longContent.Challenge}
@@ -50,9 +51,9 @@ function Page() {
                 {error && <p style={{ color: "red" }}>{error}</p>}
                 {result && <pre>{JSON.stringify(result, null, 2)}</pre>}
             </div>
-                <ActionBar/>
-                <ResultDisplay/>
-            </ReadyToGoProvider>
+            <ActionBar/>
+            <ResultDisplay/>
+        </Container>
         </Container>
     );
 }
