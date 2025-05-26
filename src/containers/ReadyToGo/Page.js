@@ -54,7 +54,6 @@ function Page() {
             <ActionBar/>
             <ResultDisplay/>
         </Container>
-        </Container>
     );
 }
 
